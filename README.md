@@ -1,2 +1,2 @@
 # c-tips
-aomw c files, which contain useful tips a nd reminders for myself
+some c files, which contain useful tips and reminders for myself
