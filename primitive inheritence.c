@@ -3,6 +3,8 @@
 #define sA struct A
 #define sB struct B
 
+// https://en.wikipedia.org/wiki/Type_punning#Sockets_example
+
 sA{
   int a;
   float b;
