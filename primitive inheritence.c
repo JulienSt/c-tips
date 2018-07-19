@@ -6,14 +6,14 @@
 // https://en.wikipedia.org/wiki/Type_punning#Sockets_example
 
 sA{
-  int a;
-  float b;
+    int a;
+    float b;
 };
 
 sB{ //inherits from A
-  int a;
-  float b;
-  int c;
+    int a;
+    float b;
+    int c;
 };
 
 int main()
@@ -23,7 +23,7 @@ int main()
     bla.b = 4.4;
     
     sB* blubb;
-    blubb = (sB*)&bla;
+    blubb = (sB*)&bla; // this is where the magic happens
     
     printf("%x \n", blubb->a);
     printf("%f \n", blubb->b);
