@@ -1,29 +1,26 @@
 #include <stdio.h>
 
-#define sA struct A
-#define sB struct B
-
 // https://en.wikipedia.org/wiki/Type_punning#Sockets_example
 
-sA{
+typedef struct{
     int a;
     float b;
-};
+}A;
 
-sB{ //inherits from A
+typedef struct{ //inherits from A
     int a;
     float b;
     int c;
-};
+}B;
 
 int main()
 {
-    sA bla;
+    A bla;
     bla.a = 5;
     bla.b = 4.4;
     
-    sB* blubb;
-    blubb = (sB*)&bla; // this is where the magic happens
+    B* blubb;
+    blubb = (B*)&bla; // this is where the magic happens
     
     printf("%x \n", blubb->a);
     printf("%f \n", blubb->b);
